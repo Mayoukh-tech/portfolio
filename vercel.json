@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "outputDirectory": "public",
+  "functions": {
+    "api/contact.js": {
+      "runtime": "nodejs20.x"
+    }
+  },
+  "rewrites": [
+    { "source": "/api/contact", "destination": "/api/contact" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
