@@ -1,0 +1,12 @@
+# netlify.toml
+# Tells Netlify: serve public/ as the site root, treat api/ as serverless functions.
+
+[build]
+  publish   = "public"        # static files directory
+  functions = "api"           # serverless functions directory
+
+# Rewrite /api/contact → the serverless function transparently
+[[redirects]]
+  from   = "/api/*"
+  to     = "/.netlify/functions/:splat"
+  status = 200
