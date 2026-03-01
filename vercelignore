@@ -1,0 +1,5 @@
+requirements.txt
+server.py
+.venv/
+__pycache__/
+.env
